@@ -1,4 +1,59 @@
-
-
+1.
 git init // Iniciamos el repositorio local
+
+3.
+git add . // Añadimos todos los cambios
+git commit - "Estructura inicial del repositorio" // Hacemos el commit de los cambios
+
+4.
+git tag -a R1 -m "Versión inicial R1" // Etiquedamos la versión
+
+5.
+git checkout -b Mejoras //Creamos la nueva rama
+git add Procesos/ControlDeCambio/DP_ControldeCambios_Grupo4-v1_1_Revisado.pdf //Añadimos los cambios
+git commit -m "Añadidas propuestas de mejora" //Hacemos el commit
+
+6.
+git add . //Añadimos los cambios de documento a la versión 2
+git commit -m "Actualización a la versión 2 del documento" //Hacemos el commit
+
+7.
+git checkout main //Cambiamos a la rama main
+git merge Mejoras //Unimos con Mejoras
+git branch -d Mejoras //Eliminamos la rama de Mejoras
+
+8.
+git rm Procesos/ControlDeCambio/DP_ControldeCambios_Grupo4-v1_1_Revisado.pdf //Eliminamos el documento de mejoras
+
+9.
+git commit -m "Eliminado PDF de propuestas de mejora" //Hacemos el commit
+git tag -a R2 -m "Versión R2 después de fusionar Mejoras" // Añadimos la nueva etiqueta
+
+10.
+//Cambiamos el archivo por la versión 3
+git add . //Añadimos los cambios
+git commit -m "Actualización a la versión 3 del proceso" //Hacemos el commit
+
+11.
+git reset R2 //Volvemos a R2
+//Actualizamos también las plantillas
+git add . //Añadimos los cambios
+git commit -m "Versión 3 del proceso con plantillas" //Hacemos el commit
+git tag -a R3 -m "Versión R3 con plantillas" //Marcamos con una nueva etiqueta
+
+12.
+git remote add origin git@github.com:r-ty0m/p6enso-individual.git //Añadimos el repositorio remoto
+git push -u origin main //Hacemos los push de main
+git push --tags //Pusheamos las etiquetas
+
+13.
+git pull origin main //Nos aseguramos de tener la versión actualizada
+
+14.
+git diff HEAD historia.txt //Comprobamos las diferencias entre el archivo historia.txt actual y el del repositorio
+
+15.
+git push origin main //Subimos los cambios al repositorio remoto
+
+
 
